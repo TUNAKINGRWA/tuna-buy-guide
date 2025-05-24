@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐟 3分钟买TUNA - 最简单的购买教程</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17074938370"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17074938370');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NV7SB3EEM0"></script>
+    <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){ dataLayer.push(arguments); }
+       gtag("js", new Date());
+       gtag("config", "G-NV7SB3EEM0");
+    </script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .step {
+            background: #f8f9fa;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #4CAF50;
+        }
+        .step-number {
+            background: #4CAF50;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .download-btn {
+            background: #FF6B6B;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .download-btn:hover {
+            background: #FF5252;
+            transform: translateY(-2px);
+        }
+        .warning {
+            background: #FFF3CD;
+            border: 1px solid #FFEAA7;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .highlight {
+            background: #FFEB3B;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .qr-section {
+            text-align: center;
+            background: #E8F5E8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 20px;
+            padding: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .lang-btn.active {
+            background: #4CAF50;
+            color: white;
+        }
+        .lang-btn:hover {
+            background: #f0f0f0;
+        }
+        .lang-btn.active:hover {
+            background: #45a049;
+        }
+        .ca-copy {
+            background: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+            white-space: nowrap;
+        }
+        .ca-copy:hover {
+            background: #45a049;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- 语言切换按钮 -->
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('zh')">中文</button>
+        <button class="lang-btn" onclick="switchLang('en')">English</button>
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🐟 3分钟买TUNA</h1>
+            <h2>最简单的金枪鱼币购买教程</h2>
+            <p><strong>无需任何技术背景，跟着做就能买到！</strong></p>
+        </div>
+
+        <div class="warning">
+            <strong>⚡ 超级简单版：</strong>
+            <br>1. 下载钱包 → 2. 充值SOL → 3. 买TUNA → 4. 完成！
+            <br><strong>总耗时：3-5分钟</strong>
+        </div>
+
+        <div class="step">
+            <span class="step-number">1</span>
+            <strong>下载Phantom钱包（手机版更简单）</strong>
+            <br><br>
+            <a href="https://phantom.app/" onclick="clickButton('download_phantom_wallet')" class="download-btn">📱 下载Phantom钱包</a>
+            <br>
+            <small>• 苹果用户：App Store搜索"Phantom"<br>
+            • 安卓用户：Google Play搜索"Phantom"<br>
+            • 电脑用户：Chrome浏览器添加插件</small>
+        </div>
+
+        <div class="step">
+            <span class="step-number">2</span>
+            <strong>创建钱包（30秒完成）</strong>
+            <br><br>
+            1. 打开Phantom，点击"创建新钱包"<br>
+            2. 记住12个英文单词（这是你的密码，很重要！）<br>
+            3. 设置钱包密码<br>
+            <br>
+            <div class="warning">
+                <strong>重要：</strong>12个英文单词是找回钱包的唯一方式，务必手写记录并保存在安全地方！
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">3</span>
+            <strong>购买SOL币（用来买TUNA）</strong>
+            <br><br>
+            <strong>方式一：直接在钱包内购买（推荐新手）</strong><br>
+            1. 点击钱包内的"购买"按钮<br>
+            2. 选择用银行卡/支付宝购买SOL<br>
+            3. 购买<span class="highlight">至少50元人民币的SOL</span>（够买TUNA+手续费）<br>
+            <br>
+            <strong>方式二：交易所转账（有经验用户）</strong><br>
+            从币安/欧易等交易所转SOL到你的Phantom钱包地址
+        </div>
+
+        <div class="step">
+            <span class="step-number">4</span>
+            <strong>在Pump.fun购买TUNA</strong>
+            <br><br>
+            1. 在Phantom钱包内打开浏览器<br>
+            2. 访问：<span class="highlight">pump.fun</span><br>
+            3. 连接你的Phantom钱包<br>
+            4. 搜索"TUNA"或直接用TUNA合约地址：<br>
+            <div style="margin: 15px 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                <span class="highlight" style="font-family: monospace; font-size: 12px; padding: 8px 12px; word-break: break-all; flex: 1; min-width: 200px;">ExDsgP6zpnXsRFeKS8WoMw7TR4g4fLCrZwU78BaTpump</span>
+                <button class="ca-copy" onclick="copyCA()" title="点击复制合约地址">
+                    📋 复制CA
+                </button>
+            </div>
+            5. 输入你想买的SOL数量<br>
+            6. 点击"Buy"购买<br>
+            <br>
+            <div class="warning">
+                <strong>建议：</strong>第一次先买少量测试，比如0.1 SOL，熟悉流程后再加仓！
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <h3>🆘 需要帮助？</h3>
+            <p><strong>加入Telegram群，获得实时帮助！</strong></p>
+            <p>Telegram群：<span class="highlight">@TUNA8888</span></p>
+            <p>或点击链接直接加入：</p>
+            <div style="background: white; padding: 20px; border-radius: 10px; display: inline-block;">
+                <a href="https://t.me/TUNA8888" onclick="clickButton('join_tuna_group')" class="download-btn" style="text-decoration: none;">🚀 ${lang === 'en' ? 'Join TUNA Group' : '立即加入TUNA群'}</a>
+            </div>
+            <br><br>
+            <p><small>群内提供：实时购买指导、价格提醒、持币者交流、24/7技术支持</small></p>
+        </div>
+
+        <div class="step">
+            <span class="step-number">5</span>
+            <strong>购买完成，加入TUNA社群！</strong>
+            <br><br>
+            <a href="https://t.me/TUNA8888" onclick="clickButton('join_telegram_group')" class="download-btn">📢 加入Telegram群</a>
+            <a href="https://x.com/tunakingrwa" onclick="clickButton('follow_twitter')" class="download-btn">🐦 关注Twitter</a>
+            <br><br>
+            🎉 恭喜！你现在是TUNA持有者了！<br>
+            💎 记得定期查看你的投资，理性投资！
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ 投资提醒：</strong><br>
+            • TUNA是meme币，价格波动大，请理性投资<br>
+            • 只投入你能承受损失的资金<br>
+            • 加入社群获取最新信息和支持<br>
+            • 有问题随时在Telegram群求助
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <h3>🐟 TUNA - 让财富自由像金枪鱼一样游向你！</h3>
+            <p><small>官网：<a href="https://tunarwa.io" target="_blank" style="color: #4CAF50; text-decoration: none;">https://tunarwa.io</a></small></p>
+        </div>
+    </div>
+
+    <script>
+        // 复制合约地址功能
+        function copyCA() {
+            const caText = "ExDsgP6zpnXsRFeKS8WoMw7TR4g4fLCrZwU78BaTpump";
+            const isEnglish = document.querySelector('.lang-btn.active').textContent === 'English';
+            const successMsg = isEnglish ? 
+                "✅ TUNA contract address copied to clipboard!" : 
+                "✅ TUNA合约地址已复制到剪贴板！";
+            
+            navigator.clipboard.writeText(caText).then(function() {
+                alert(successMsg);
+            }).catch(function() {
+                // 备用复制方法
+                const textArea = document.createElement("textarea");
+                textArea.value = caText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert(successMsg);
+            });
+        }
+
+        // 语言切换功能
+        const translations = {
+            zh: {
+                title: "🐟 3分钟买TUNA",
+                subtitle: "最简单的金枪鱼币购买教程",
+                description: "无需任何技术背景，跟着做就能买到！",
+                quickStep: "⚡ 超级简单版：",
+                quickStepContent: "1. 下载钱包 → 2. 充值SOL → 3. 买TUNA → 4. 完成！",
+                quickStepTime: "总耗时：3-5分钟",
+                step1Title: "下载Phantom钱包（手机版更简单）",
+                step1Btn: "📱 下载Phantom钱包",
+                step1Content: "• 苹果用户：App Store搜索\"Phantom\"<br>• 安卓用户：Google Play搜索\"Phantom\"<br>• 电脑用户：Chrome浏览器添加插件",
+                step2Title: "创建钱包（30秒完成）",
+                step2Content: "1. 打开Phantom，点击\"创建新钱包\"<br>2. 记住12个英文单词（这是你的密码，很重要！）<br>3. 设置钱包密码",
+                step2Warning: "重要：12个英文单词是找回钱包的唯一方式，务必手写记录并保存在安全地方！",
+                step3Title: "购买SOL币（用来买TUNA）",
+                step3Method1: "方式一：直接在钱包内购买（推荐新手）",
+                step3Method1Content: "1. 点击钱包内的\"购买\"按钮<br>2. 选择用银行卡/支付宝购买SOL<br>3. 购买至少50元人民币的SOL（够买TUNA+手续费）",
+                step3Method2: "方式二：交易所转账（有经验用户）",
+                step3Method2Content: "从币安/欧易等交易所转SOL到你的Phantom钱包地址",
+                step4Title: "在Pump.fun购买TUNA",
+                step4Content: "1. 在Phantom钱包内打开浏览器<br>2. 访问：pump.fun<br>3. 连接你的Phantom钱包<br>4. 搜索\"TUNA\"或直接用TUNA合约地址：",
+                step4Rest: "5. 输入你想买的SOL数量<br>6. 点击\"Buy\"购买",
+                step4Warning: "建议：第一次先买少量测试，比如0.1 SOL，熟悉流程后再加仓！",
+                helpTitle: "🆘 需要帮助？",
+                helpContent: "加入Telegram群，获得实时帮助！",
+                helpWechat: "Telegram群：@TUNA8888",
+                helpQR: "或点击链接直接加入：",
+                helpServices: "群内提供：实时购买指导、价格提醒、持币者交流、24/7技术支持",
+                step5Title: "购买完成，加入TUNA社群！",
+                telegramBtn: "📢 加入Telegram群",
+                twitterBtn: "🐦 关注Twitter",
+                congratulations: "🎉 恭喜！你现在是TUNA持有者了！<br>💎 记得定期查看你的投资，理性投资！",
+                warningTitle: "⚠️ 投资提醒：",
+                warningContent: "• TUNA是meme币，价格波动大，请理性投资<br>• 只投入你能承受损失的资金<br>• 加入社群获取最新信息和支持<br>• 有问题随时在Telegram群求助",
+                slogan: "🐟 TUNA - 让财富自由像金枪鱼一样游向你！",
+                website: "官网：<a href='https://tunarwa.io' target='_blank' style='color: #4CAF50; text-decoration: none;'>https://tunarwa.io</a>"
+            },
+            en: {
+                title: "🐟 Buy TUNA in 3 Minutes",
+                subtitle: "The Easiest TUNA Coin Purchase Guide",
+                description: "No technical background required, just follow the steps!",
+                quickStep: "⚡ Super Simple Version:",
+                quickStepContent: "1. Download Wallet → 2. Buy SOL → 3. Buy TUNA → 4. Done!",
+                quickStepTime: "Total Time: 3-5 minutes",
+                step1Title: "Download Phantom Wallet (Mobile is easier)",
+                step1Btn: "📱 Download Phantom Wallet",
+                step1Content: "• iOS users: Search \"Phantom\" in App Store<br>• Android users: Search \"Phantom\" in Google Play<br>• PC users: Add Chrome extension",
+                step2Title: "Create Wallet (30 seconds)",
+                step2Content: "1. Open Phantom, click \"Create New Wallet\"<br>2. Remember 12 English words (this is your password, very important!)<br>3. Set wallet password",
+                step2Warning: "Important: The 12 English words are the only way to recover your wallet. Must write them down and keep them safe!",
+                step3Title: "Buy SOL Coins (to purchase TUNA)",
+                step3Method1: "Method 1: Buy directly in wallet (Recommended for beginners)",
+                step3Method1Content: "1. Click \"Buy\" button in wallet<br>2. Choose to buy SOL with bank card/Alipay<br>3. Buy at least $7 worth of SOL (enough for TUNA + fees)",
+                step3Method2: "Method 2: Exchange transfer (Experienced users)",
+                step3Method2Content: "Transfer SOL from Binance/OKX to your Phantom wallet address",
+                step4Title: "Buy TUNA on Pump.fun",
+                step4Content: "1. Open browser in Phantom wallet<br>2. Visit: pump.fun<br>3. Connect your Phantom wallet<br>4. Search \"TUNA\" or use TUNA contract address:",
+                step4Rest: "5. Enter the amount of SOL you want to spend<br>6. Click \"Buy\" to purchase",
+                step4Warning: "Suggestion: Buy a small amount first (like 0.1 SOL) to test, then add more after familiar with the process!",
+                helpTitle: "🆘 Need Help?",
+                helpContent: "Join Telegram group for real-time support!",
+                helpWechat: "Telegram Group: @TUNA8888",
+                helpQR: "Or click link to join directly:",
+                helpServices: "Group provides: Real-time purchase guidance, price alerts, holder communication, 24/7 tech support",
+                step5Title: "Purchase Complete, Join TUNA Community!",
+                telegramBtn: "📢 Join Telegram Group",
+                twitterBtn: "🐦 Follow Twitter",
+                congratulations: "🎉 Congratulations! You are now a TUNA holder!<br>💎 Remember to check your investment regularly and invest rationally!",
+                warningTitle: "⚠️ Investment Warning:",
+                warningContent: "• TUNA is a meme coin with high price volatility, please invest rationally<br>• Only invest money you can afford to lose<br>• Join community for latest updates and support<br>• Ask for help in Telegram group anytime",
+                slogan: "🐟 TUNA - Let financial freedom swim to you like a tuna!",
+                website: "Website: <a href='https://tunarwa.io' target='_blank' style='color: #4CAF50; text-decoration: none;'>https://tunarwa.io</a>"
+            }
+        };
+
+        function switchLang(lang) {
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const t = translations[lang];
+            if (!t) return;
+            
+            // 更新内容
+            document.querySelector('h1').innerHTML = t.title;
+            document.querySelector('h2').innerHTML = t.subtitle;
+            document.querySelector('.header p strong').innerHTML = t.description;
+            
+            // 更新快速步骤
+            const warning = document.querySelector('.warning');
+            warning.innerHTML = `<strong>${t.quickStep}</strong><br>${t.quickStepContent}<br><strong>${t.quickStepTime}</strong>`;
+            
+            // 更新各步骤
+            const steps = document.querySelectorAll('.step');
+            
+            // Step 1
+            steps[0].innerHTML = `
+                <span class="step-number">1</span>
+                <strong>${t.step1Title}</strong>
+                <br><br>
+                <a href="https://phantom.app/" onclick="clickButton('download_phantom_wallet')" class="download-btn">${t.step1Btn}</a>
+                <br>
+                <small>${t.step1Content}</small>
+            `;
+            
+            // Step 2
+            steps[1].innerHTML = `
+                <span class="step-number">2</span>
+                <strong>${t.step2Title}</strong>
+                <br><br>
+                ${t.step2Content}
+                <br>
+                <div class="warning">
+                    <strong>${lang === 'en' ? 'Important:' : '重要：'}</strong> ${t.step2Warning}
+                </div>
+            `;
+            
+            // Step 3
+            steps[2].innerHTML = `
+                <span class="step-number">3</span>
+                <strong>${t.step3Title}</strong>
+                <br><br>
+                <strong>${t.step3Method1}</strong><br>
+                ${t.step3Method1Content}<br>
+                <br>
+                <strong>${t.step3Method2}</strong><br>
+                ${t.step3Method2Content}
+            `;
+            
+            // Step 4
+            steps[3].innerHTML = `
+                <span class="step-number">4</span>
+                <strong>${t.step4Title}</strong>
+                <br><br>
+                ${t.step4Content}<br>
+                <div style="margin: 15px 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <span class="highlight" style="font-family: monospace; font-size: 12px; padding: 8px 12px; word-break: break-all; flex: 1; min-width: 200px;">ExDsgP6zpnXsRFeKS8WoMw7TR4g4fLCrZwU78BaTpump</span>
+                    <button class="ca-copy" onclick="copyCA()" title="Click to copy contract address">
+                        📋 ${lang === 'en' ? 'Copy CA' : '复制CA'}
+                    </button>
+                </div>
+                ${t.step4Rest}<br>
+                <br>
+                <div class="warning">
+                    <strong>${lang === 'en' ? 'Suggestion:' : '建议：'}</strong> ${t.step4Warning}
+                </div>
+            `;
+            
+            // 更新帮助部分
+            const qrSection = document.querySelector('.qr-section');
+            qrSection.innerHTML = `
+                <h3>${t.helpTitle}</h3>
+                <p><strong>${t.helpContent}</strong></p>
+                <p>${t.helpWechat}</p>
+                <p>${t.helpQR}</p>
+                <div style="background: white; padding: 20px; border-radius: 10px; display: inline-block;">
+                    <a href="https://t.me/TUNA8888" onclick="clickButton('join_tuna_group')" class="download-btn" style="text-decoration: none;">🚀 ${lang === 'en' ? 'Join TUNA Group' : '立即加入TUNA群'}</a>
+                </div>
+                <br><br>
+                <p><small>${t.helpServices}</small></p>
+            `;
+            
+            // Step 5
+            steps[4].innerHTML = `
+                <span class="step-number">5</span>
+                <strong>${t.step5Title}</strong>
+                <br><br>
+                <a href="https://t.me/TUNA8888" onclick="clickButton('join_telegram_group')" class="download-btn">${t.telegramBtn}</a>
+                <a href="https://x.com/tunakingrwa" onclick="clickButton('follow_twitter')" class="download-btn">${t.twitterBtn}</a>
+                <br><br>
+                ${t.congratulations}
+            `;
+            
+            // 更新最后的警告
+            const warnings = document.querySelectorAll('.warning');
+            const finalWarning = warnings[warnings.length - 1];
+            if (finalWarning) {
+                finalWarning.innerHTML = `
+                    <strong>${t.warningTitle}</strong><br>
+                    ${t.warningContent}
+                `;
+            }
+            
+            // 更新底部
+            const bottom = document.querySelector('div[style*="text-align: center"]');
+            bottom.innerHTML = `
+                <h3>${t.slogan}</h3>
+                <p><small>${t.website}</small></p>
+            `;
+        }
+
+        // 添加页面加载完成后的提示
+        window.addEventListener('load', function() {
+            console.log("🐟 TUNA购买指南已加载完成！");
+        });
+    </script>
+
+    <script>
+     function clickButton(name) {
+             gtag('event', 'CUSTOM_CLICK', {
+               'action': name,
+             });
+        }
+    </script>
+</body>
+</html> 
